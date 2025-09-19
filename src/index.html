@@ -1,15 +1,38 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Excusa Random</title>
+  <title>Generador de Excusas</title>
+
+  <!-- Fuente y estilos -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
-  <div style="text-align:center; margin-top: 100px;">
-    <h1>Generador de Excusas 💤</h1>
-    <p id="excuse" style="font-size: 24px;"></p>
-  </div>
+  <main class="page">
+    <section class="card" role="region" aria-labelledby="title">
+      <header class="card__header">
+        <h1 id="title">Generador de Excusas <span class="muted">v1</span></h1>
+        <p class="subtitle">Para emergencias creativas 🧠</p>
+      </header>
+
+      <div class="card__body">
+        <p id="excuse" class="excuse" aria-live="polite">…</p>
+      </div>
+
+      <footer class="card__footer">
+        <button id="btn-generate" class="btn primary">Generar otra</button>
+        <button id="btn-copy" class="btn">Copiar</button>
+        <span id="copy-feedback" class="feedback" aria-hidden="true">Copiado ✔</span>
+      </footer>
+    </section>
+
+    <p class="tiny-note">Tip: usa la excusa con responsabilidad 😉</p>
+  </main>
 
   <script src="app.js"></script>
 </body>
